@@ -1,4 +1,4 @@
-// benchmark_sender generates load against the Wazuh manager's ingestion paths
+// benchmark_sender generates load against the Cyber Reviewer manager's ingestion paths
 // and reports what it observed. See the design set in ../../docu/.
 package main
 

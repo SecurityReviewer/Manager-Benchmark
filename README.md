@@ -1,6 +1,6 @@
 # manager_benchmark
 
-Load generation and reporting for the Wazuh manager's agent-facing ingestion paths. Its first (and
+Load generation and reporting for the Cyber Reviewer manager's agent-facing ingestion paths. Its first (and
 current) target is the **inventory synchronization** path — remoted's `POST /stateful` and the
 `inventory_sync_server` behind it — together with the control and engine-event traffic a real fleet
 produces alongside it. It lives under `tools/` rather than inside the module because it drives the
@@ -193,7 +193,7 @@ run exits. Pair it with `--keep-agents` so the documents survive after that too:
 | `run_benchmark.sh` | Orchestrates one run end to end (monitor + sender + summary + charts) |
 | `prepare_manager.sh` | Opens password-free enrollment for agent mode (idempotent) |
 | `scrape_metrics.sh` | Standalone `GET /metrics` poller (long format). Only used as a fallback when the monitor cannot run |
-| `cleanup_agents.sh` | Deletes only `bench-*` agents via the Wazuh API (never a real one) |
+| `cleanup_agents.sh` | Deletes only `bench-*` agents via the Cyber Reviewer API (never a real one) |
 | `indexer_control.sh` | Start/stop/health the local `wazuh-indexer` (e.g. an indexer-down scenario) |
 | `result_summary.py` | Collates a run's artifacts into `summary.json` (descriptive only, no pass/fail) |
 | `run_matrix.sh` | Runs the whole matrix the load report is built from |

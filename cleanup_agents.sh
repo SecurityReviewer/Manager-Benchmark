@@ -26,7 +26,7 @@ TOKEN=$(curl -s -k -X POST "${API_URL}/security/user/authenticate" \
     -u "${API_USER}:${API_PASS}" | "$PYTHON" -c 'import sys,json; print(json.load(sys.stdin)["data"]["token"])' 2>/dev/null || true)
 
 if [[ -z "$TOKEN" ]]; then
-    echo "Error: could not authenticate with the Wazuh API at ${API_URL}" >&2
+    echo "Error: could not authenticate with the Cyber Reviewer API at ${API_URL}" >&2
     exit 1
 fi
 
